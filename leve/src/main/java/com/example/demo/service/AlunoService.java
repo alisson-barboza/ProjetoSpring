@@ -58,8 +58,9 @@ public class AlunoService {
 	}
 	
 	
-	public void remover(String nome) {
+	public ResponseEntity remover(String nome) {
 		repository.deleteByNome(nome);
+		return ResponseEntity.ok("Aluno removido");
 	}
 
 	public ResponseEntity matricular(MatriculaDTO dto) {

@@ -48,12 +48,11 @@ public class MateriaService {
 		} catch (CodigoInvalidoException e) {			
 			e.printStackTrace();
 			return ResponseEntity.ok(e.getMessage());
-		}
-		
+		}		
 	}
 
-	public void remover(String nome) {
-		Materia materia = buscar(nome);
-		repository.delete(materia);	
+	public ResponseEntity remover(String nome) {
+		repository.deleteByNome(nome);
+		return ResponseEntity.ok("Materia removida");
 	}
 }

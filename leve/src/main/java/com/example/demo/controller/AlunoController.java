@@ -47,8 +47,8 @@ public class AlunoController {
 	}
 	
 	@DeleteMapping(path = "/remover/{nome}")
-	public void remover(@PathVariable String nome) {
-		service.remover(nome);
+	public ResponseEntity remover(@PathVariable String nome) {
+		return service.remover(nome);
 	}
 	
 }
