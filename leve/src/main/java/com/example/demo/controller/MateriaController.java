@@ -33,15 +33,13 @@ public class MateriaController {
 		return service.buscar(nome);		
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@PostMapping(path = "/inserir")
-	public ResponseEntity inserir(@RequestBody Materia m) {
+	public ResponseEntity<?> inserir(@RequestBody Materia m) {
 		return service.inserir(m);
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@PostMapping(path = "/alterar")
-	public ResponseEntity alterar(@RequestBody Materia m) {
+	public ResponseEntity <?> alterar(@RequestBody Materia m) {
 		return service.inserir(m);
 	}
 	

@@ -34,15 +34,13 @@ public class AlunoController {
 		return service.buscarPorNome(nome);
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@PostMapping(path = "/inserir")
-	public ResponseEntity inserir(@RequestBody Aluno a) {
+	public ResponseEntity<?> inserir(@RequestBody Aluno a) {
 		return service.inserir(a);				
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@PostMapping(path = "/alterar")
-	public ResponseEntity alterar(@RequestBody Aluno a) {
+	public ResponseEntity<?> alterar(@RequestBody Aluno a) {
 		return service.inserir(a);
 	}
 	
