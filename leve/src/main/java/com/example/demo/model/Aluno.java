@@ -18,7 +18,7 @@ import javax.persistence.ManyToMany;
 
 
 @Entity
-public class Aluno {
+public class Aluno extends AbstractEntity<Integer> {
 
 	
 	@Id
