@@ -25,7 +25,10 @@ public class Aluno extends AbstractEntity<Integer> {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;	
 	
-	
+	/*
+	Note: An nice tip to you is to let your code in only one language, cause makes it more understandable and	
+	easier to read!
+	*/
 	private String nome;
 	private int idade;
 	
